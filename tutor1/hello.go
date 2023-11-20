@@ -82,7 +82,7 @@ var x int=5
   fmt.Println(sum3)
 
   //go switch 
-  day := 7
+  day := 5
 
   switch day {
   case 1:
