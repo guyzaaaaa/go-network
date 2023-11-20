@@ -24,7 +24,7 @@ var x int=5
 	fmt.Println("complex128 is ", complex128)
 	fmt.Println("rune is", r)
 	var myName string= "Thanapat Apiwong" 
-	fmt.Println(myName + "is a robot")
+	fmt.Println(myName + "is a GOD")
 	fmt.Println(myName[3])
 	fmt.Println("Length of myName is", len(myName))
 	
@@ -58,4 +58,46 @@ var x int=5
 	var x int=5
 	var xPtr*int=&x
 	fmt.Println(xPtr)
+
+
+//type
+	var m int = 500
+  var y int = -4500
+  fmt.Printf("Type: %T, value: %v", m, m)
+  fmt.Printf("Type: %T, value: %v", y, y)
+
+
+  //map
+  var a = map[string]string{"brand": "Ford", "model": "Mustang", "year": "2023"}
+  b := map[string]int{"Oslo": 1, "Bergen": 2, "Trondheim": 3, "Stavanger": 4}
+  fmt.Printf("a\t%v\n", a)
+  fmt.Printf("b\t%v\n", b)
+
+  //Go Operators
+  var (
+    sum1 = 250 + 50 // 150 (100 + 50)
+    sum2 = sum1 + 250 // 400 (150 + 250)
+    sum3 = sum2 + sum2 // 800 (400 + 400)
+  )
+  fmt.Println(sum3)
+
+  //go switch 
+  day := 7
+
+  switch day {
+  case 1:
+    fmt.Println("Monday")
+  case 2:
+    fmt.Println("Tuesday")
+  case 3:
+    fmt.Println("Wednesday")
+  case 4:
+    fmt.Println("Thursday")
+  case 5:
+    fmt.Println("Friday")
+  case 6:
+    fmt.Println("Saturday")
+  case 7:
+    fmt.Println("Sunday")
+  }
 }
