@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"net/http"
 	"strconv"
-
 	"github.com/gorilla/mux"
 )
 
@@ -20,17 +19,21 @@ func main() {
 		vars := mux.Vars(r)
 		num1, _ := strconv.Atoi(vars["num1"])
 		num2, _ := strconv.Atoi(vars["num2"])
+		fmt.Fprintf(w, "<h1>Calculator: %d Plus %d</h1>", num1, num2)
 		fmt.Fprintf(w, "<h1>Total = %d</h1>", num1+num2)
 	})
+
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
         fmt.Fprintf(w, "Hello World")
     })
-	http.HandleFunc("/about", func(w http.ResponseWriter, r *http.Request) {
-        fmt.Fprintf(w, "My Name is Makul2ee")
+
+    http.HandleFunc("/about", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprintf(w, "My Name is ping")
     })
+
+	// fs := http.FileServer(http.Dir("static/"))
+	// http.Handle("/static/", http.StripPrefix("/static/", fs))
 	
-	fs := http.FileServer(http.Dir("static/"))
-    http.Handle("/static/", http.StripPrefix("/static/", fs))
 
     http.ListenAndServe(":8080", r)
 }
