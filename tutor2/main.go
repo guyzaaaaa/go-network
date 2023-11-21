@@ -28,7 +28,7 @@ func main() {
     })
 
     http.HandleFunc("/about", func(w http.ResponseWriter, r *http.Request) {
-        fmt.Fprintf(w, "My Name is ping")
+        fmt.Fprintf(w, "GUY")
     })
 
 	// fs := http.FileServer(http.Dir("static/"))
