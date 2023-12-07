@@ -79,7 +79,7 @@ func main() {
 
 			if cmd == "เพิ่ม" {			// ถ้า cmd เป็น add ให้เพิ่มข้อมูลเข้าไปใน todoList
 				todoList = append(todoList, msg) // append คือ การเพิ่มข้อมูลเข้าไปใน array
-			} else if cmd == "เสร็จสิ้น" {   // ถ้า cmd เป็น done ให้ลบข้อมูลออกจาก todoList
+			} else if cmd == "ลบ" {   // ถ้า cmd เป็น done ให้ลบข้อมูลออกจาก todoList
 				updateTodoList(msg)		// เรียกใช้ฟังก์ชัน updateTodoList
 			}
 
