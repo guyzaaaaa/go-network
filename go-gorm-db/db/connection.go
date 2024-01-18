@@ -9,7 +9,6 @@ import (
 func ConnectDatabase(dbType, dbUser, dbPassword, dbHost, dbPort, dbName string) (*gorm.DB, error) {
 	
 	var dialector gorm.Dialector
-	//ตรวจสอบว่าเป็นฐานข้อมูลชนิดใด
 	switch dbType {
 	case "mysql":
 // dsn := "admin:adminpassword@tcp(localhost:3306)/go_gorm?charset=utf8mb4&parseTime=True&loc=Local"

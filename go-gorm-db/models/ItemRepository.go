@@ -48,7 +48,7 @@ func (r *ItemRepository) GetItem(c *gin.Context) {
 func (r *ItemRepository) UpdateItem(c *gin.Context) {
 	id := c.Param("id")
 	var item Item
-	r.Db.First(&item, id) //select * from item where id
+	r.Db.First(&item, id)
 	c.BindJSON(&item)
 	r.Db.Save(&item)
 	c.JSON(200, item)
